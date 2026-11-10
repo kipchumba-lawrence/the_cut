@@ -82,16 +82,17 @@ body { font-family: var(--font-ui) }
 .btn.primary { box-shadow: 0 8px 20px -12px var(--acc) }
 .input { border-radius: 12px }
 
-/* Tab bar: floating, rounded, with the start button in mango while recording */
+/* Tab bar: docked to the bottom edge and filling the home-indicator area (safe area), with
+   rounded top corners. A floating bar left the page showing through underneath it. */
 #tabbar {
-  inset-inline-start: 10px; inset-inline-end: 10px; bottom: calc(8px + var(--sab));
-  padding: 8px 6px 7px; border-radius: 24px;
-  border: 1px solid var(--sep-op);
-  box-shadow: 0 16px 40px -18px rgba(0,0,0,.8);
+  inset-inline-start: 0; inset-inline-end: 0; bottom: 0;
+  padding: 8px 6px calc(4px + var(--sab));
+  border-radius: 22px 22px 0 0;
+  border: 1px solid var(--sep-op); border-bottom: 0;
+  box-shadow: 0 -12px 32px -20px rgba(0,0,0,.7);
 }
 #tabbar button { font-size: 10.5px }
 #tabbar button.start .cir { box-shadow: 0 10px 24px -10px var(--acc) }
-
 /* ---------------------------------------------------------- shared bits -- */
 .cg-link { background: none; border: 0; color: var(--acc-ink); font: inherit; font-weight: 500; display: inline-flex; align-items: center; gap: 2px; cursor: pointer; padding: 6px 0 }
 .cg-link .icn { font-size: 15px }
