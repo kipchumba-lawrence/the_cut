@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd frontend && npm install --no-audit --no-fund --ignore-scripts",
+  "buildCommand": "cd frontend && npx vite build",
+  "outputDirectory": "frontend/dist",
+  "framework": null,
+  "rewrites": [
+    { "source": "/exercise-media/:path*", "destination": "https://cdn.jsdelivr.net/gh/DuarteSantos8/openGym@50ab7f24e3c4ee70e7f26b3beb426f571e03414b/catalogue/media/:path*" }
+  ],
+  "headers": [
+    { "source": "/sw.js", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+  ]
+}
