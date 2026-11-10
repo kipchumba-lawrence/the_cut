@@ -32,7 +32,7 @@ dashboard, passkeys, and the Zepp watch relay.
 | `supabase/functions/api/` | Edge Function: `/config`, `/me`, `/data`, `/data/rev`, `/account/delete` |
 | `supabase/migrations/` | Tables and row-level security |
 | `vercel.json` | Build + exercise media served from openGym's repo via jsDelivr |
-| `api/` | openGym's original Node server, kept for reference, unused |
+| (removed) | openGym's Node server, Docker, Helm and Kubernetes files: see upstream DuarteSantos8/openGym |
 
 ## Deploy
 
