@@ -22,7 +22,7 @@ vi.mock('./capacitor-fetch.js', () => ({
 
 const local = await import('./coach-local.js')
 const { _resetCoachDevice, loadCoachDevice } = await import('./coach-device.js')
-const { EXERCISES } = await import('../../../api/coach/core/library-data.js')
+const { EXERCISES } = await import('../../../shared/coach/core/library-data.js')
 const { todayISO } = await import('./format.js')
 
 const EX = EXERCISES[0].id

@@ -1,7 +1,7 @@
 // Plain http:// for the phone's own Coach endpoint (#913): allowed to an address on the home
 // network, never to one on the internet, both when the endpoint is set up and on every request.
 import { describe, it, expect, vi } from 'vitest'
-import { isPrivateHost, phoneMayCall, validateBaseUrl } from '../../../api/coach/core/providers.js'
+import { isPrivateHost, phoneMayCall, validateBaseUrl } from '../../../shared/coach/core/providers.js'
 
 const calls = []
 vi.mock('./capacitor-fetch.js', () => ({

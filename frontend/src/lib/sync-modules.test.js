@@ -2,7 +2,7 @@
    module keep both, and the server stamps a writer that does not stamp per module too. */
 import { describe, expect, it } from 'vitest'
 import { mergeStates, stampEdits } from './sync-merge.js'
-import { stampPut } from '../../../api/sync-stamps.js'
+import { stampPut } from '../../../shared/sync-stamps.js'
 import { isOn } from './modules.js'
 
 const clone = v => JSON.parse(JSON.stringify(v))

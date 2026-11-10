@@ -2,7 +2,7 @@
    PUT /api/data. The two must agree; and what the server stamps for a writer that does not stamp
    its own changes (an older app, an API planner) must hold in this side's merge. */
 import { describe, expect, it } from 'vitest'
-import * as S from '../../../api/sync-stamps.js'
+import * as S from '../../../shared/sync-stamps.js'
 import { highestStamp, mergeDeletions, mergeEdits, mergeStates, stampChange, stampEntry, stampEdits, stampRestore } from './sync-merge.js'
 
 const clone = v => JSON.parse(JSON.stringify(v))

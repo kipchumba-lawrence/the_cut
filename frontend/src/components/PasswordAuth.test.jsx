@@ -3,7 +3,7 @@ import React, { act } from 'react'
 import { createRoot } from 'react-dom/client'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { passwordError, PasswordSignInSheet, PasswordRegisterForm, PasswordRow, PasswordSheet, EmailSheet, looksLikeEmail } from './PasswordAuth.jsx'
-import { normalizeEmail } from '../../../api/password.js'
+import { normalizeEmail } from '../../../shared/password.js'
 
 globalThis.IS_REACT_ACT_ENVIRONMENT = true
 

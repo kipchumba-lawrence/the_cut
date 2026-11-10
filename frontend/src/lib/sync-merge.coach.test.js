@@ -5,7 +5,7 @@
 import { describe, expect, it } from 'vitest'
 import { COACH_CAPS, mergeCoach, mergeStates, stampChange } from './sync-merge.js'
 import { appendChat, appendLog, pushSnapshot, revertLast, CHAT_MAX, LOG_MAX, SNAPSHOT_MAX, CONSENT_VERSION } from './coach.js'
-import * as server from '../../../api/sync-stamps.js'
+import * as server from '../../../shared/sync-stamps.js'
 
 const T = 1_800_000_000_000
 const clone = o => JSON.parse(JSON.stringify(o))

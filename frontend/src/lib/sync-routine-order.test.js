@@ -5,7 +5,7 @@
    it for a writer that does not (api/sync-stamps.js), and keeps a newer order from an older copy. */
 import { describe, expect, it } from 'vitest'
 import { mergeStates, orderMoved, stampChange } from './sync-merge.js'
-import * as S from '../../../api/sync-stamps.js'
+import * as S from '../../../shared/sync-stamps.js'
 
 const clone = v => JSON.parse(JSON.stringify(v))
 const T = 1_800_000_000_000

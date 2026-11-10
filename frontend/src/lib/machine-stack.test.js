@@ -10,7 +10,7 @@ import { buildPlannedEntry } from './session-start.js'
 import { dropGrid } from './plates.js'
 import { nextDropWeight } from './workout-model.js'
 import { mergeStates, STAMPED_MAPS } from './sync-merge.js'
-import { STAMPED_MAPS as API_STAMPED_MAPS } from '../../../api/sync-stamps.js'
+import { STAMPED_MAPS as API_STAMPED_MAPS } from '../../../shared/sync-stamps.js'
 import { EXIDX } from './exercises.js'
 
 const FLY = '0596'       // lever seated fly

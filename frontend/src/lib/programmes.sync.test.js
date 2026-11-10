@@ -2,7 +2,7 @@
 // and kept by an older app that has never heard of them.
 import { describe, it, expect } from 'vitest'
 import { mergeStates, stampEdits, resetIdsOf, sinceReset } from './sync-merge.js'
-import { stampPut } from '../../../api/sync-stamps.js'
+import { stampPut } from '../../../shared/sync-stamps.js'
 
 const clone = v => JSON.parse(JSON.stringify(v))
 const T = 1_800_000_000_000

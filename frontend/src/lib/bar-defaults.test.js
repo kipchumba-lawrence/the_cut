@@ -7,7 +7,7 @@ import { baseWeightFor, rowLoad, dropGrid } from './plates.js'
 import { barFloor } from './history.js'
 import { convertStateUnit } from './units.js'
 import { mergeStates, stampChange, stampEdits, stampRestore } from './sync-merge.js'
-import * as Server from '../../../api/sync-stamps.js'
+import * as Server from '../../../shared/sync-stamps.js'
 import { EXDB } from './exercises-data.js'
 
 const idOf = eq => EXDB.find(e => e.eq === eq).id

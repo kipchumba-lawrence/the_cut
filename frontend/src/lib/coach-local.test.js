@@ -27,7 +27,7 @@ const local = await import('./coach-local.js')
 const { _resetCoachDevice, loadCoachDevice, saveCoachDevice, COACH_LIMITS } = await import('./coach-device.js')
 const { applyChangeSet, markStale, planHash } = await import('./coach.js')
 const { todayISO } = await import('./format.js')
-const { EXERCISES } = await import('../../../api/coach/core/library-data.js')
+const { EXERCISES } = await import('../../../shared/coach/core/library-data.js')
 
 const EX = EXERCISES[0].id, EX2 = EXERCISES[1].id
 const state = () => ({
@@ -114,7 +114,7 @@ describe('the Coach on a phone with its own key', () => {
   })
 
   it('a saved model the key cannot use is swapped for one it can, and the swap is kept (#758)', async () => {
-    const { HTTP_PROVIDERS } = await import('../../../api/coach/core/providers.js')
+    const { HTTP_PROVIDERS } = await import('../../../shared/coach/core/providers.js')
     const next = HTTP_PROVIDERS.gemini.defaultModel
     device.data = { mode: 'byok', provider: 'gemini', model: 'gemini-2.5-pro', baseUrl: null }
     wire.answer = (n, url) => url.includes('/models?')
@@ -147,7 +147,7 @@ describe('the Coach on a phone with its own key', () => {
     expect(kept.steps).toEqual(expect.arrayContaining(['json_object', 'temperature']))
 
     // A fresh launch: the in-memory lesson is gone, the device file still has it.
-    const { rememberCompatProfile } = await import('../../../api/coach/core/adapters/http.js')
+    const { rememberCompatProfile } = await import('../../../shared/coach/core/adapters/http.js')
     rememberCompatProfile('compatible', { providerOptions: { compatible: { baseUrl: 'https://gw.test/v1' } } }, 'gpt-6.1-sol', [])
     local._resetLocal(); wire.calls = []
     await saveCoachDevice({ pending: null })

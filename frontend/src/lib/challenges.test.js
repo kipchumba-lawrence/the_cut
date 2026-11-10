@@ -6,7 +6,7 @@ import {
 } from './challenges.js'
 import { mergeStates } from './sync-merge.js'
 import { convertStateUnit } from './units.js'
-import * as api from '../../../api/sync-stamps.js'
+import * as api from '../../../shared/sync-stamps.js'
 
 // Catalogue ids: barbell bench press, full squat, curl, cable row, floor crunch, band shoulder
 // press, pull-up, chin-up, push-up, run.

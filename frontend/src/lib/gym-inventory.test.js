@@ -11,7 +11,7 @@ import { barTypeWeight } from './bar.js'
 import { mergeStates, stampChange } from './sync-merge.js'
 import { buildCompletedWorkout } from './finish-workout.js'
 import { buildSnapshot } from './watch-sync.js'
-import * as coachPayload from '../../../api/coach/core/payload.js'
+import * as coachPayload from '../../../shared/coach/core/payload.js'
 
 const BENCH = EXDB.find(e => e.eq === 'barbell' && /bench press/.test(e.n)).id
 const CURL = EXDB.find(e => e.eq === 'dumbbell' && /curl/.test(e.n)).id
